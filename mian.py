@@ -69,6 +69,7 @@ if __name__ == "__main__":
     folder_path = os.getcwd()
     output_file = os.path.join(folder_path, "key_records.txt")
     password = "password"
+    # 这里输入你要的秘钥数量 
     num_keys = 5
 
     try:
@@ -86,7 +87,8 @@ if __name__ == "__main__":
 
     try:
         for i in range(1, num_keys + 1):
-            name = f"SpringFarm{i}"
+            # 修改秘钥名称，秘钥名称是不能重复的
+            name = f"SpringDAO{i}"
             success = run_soundness_generate_key(name, password, output_file)
 
             if success:
